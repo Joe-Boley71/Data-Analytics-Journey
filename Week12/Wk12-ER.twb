@@ -1,0 +1,929 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20262.26.0603.1643                               -->
+<workbook original-version='18.1' source-build='2026.2.0 (20262.26.0603.1643)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <Extensions />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Target Wait Time' datatype='integer' name='[Parameter 2296078424903680]' param-domain-type='any' role='measure' type='quantitative' value='20'>
+        <calculation class='tableau' formula='20' />
+      </column>
+    </datasource>
+    <datasource caption='Hospital ER' inline='true' name='federated.071q73a1w3m9wx1b3tg2r07t78jj' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Hospital ER' name='textscan.00pfbwp0b93nif1133vhh1l1uzuk'>
+            <connection class='textscan' directory='C:/Users/ebntl/Desktop/Bootcmaps/personal_ref/Data-Analytics-Journey/Week12' filename='Hospital ER.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.00pfbwp0b93nif1133vhh1l1uzuk' name='Hospital ER.csv' table='[Hospital ER#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='datetime' name='date' ordinal='0' />
+            <column datatype='string' name='patient_id' ordinal='1' />
+            <column datatype='string' name='patient_gender' ordinal='2' />
+            <column datatype='integer' name='patient_age' ordinal='3' />
+            <column datatype='integer' name='patient_sat_score' ordinal='4' />
+            <column datatype='string' name='patient_first_inital' ordinal='5' />
+            <column datatype='string' name='patient_last_name' ordinal='6' />
+            <column datatype='string' name='patient_race' ordinal='7' />
+            <column datatype='boolean' name='patient_admin_flag' ordinal='8' />
+            <column datatype='integer' name='patient_waittime' ordinal='9' />
+            <column datatype='string' name='department_referral' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Hospital ER.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[Hospital ER.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[patient_id]</local-name>
+            <parent-name>[Hospital ER.csv]</parent-name>
+            <remote-alias>patient_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[patient_gender]</local-name>
+            <parent-name>[Hospital ER.csv]</parent-name>
+            <remote-alias>patient_gender</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[patient_age]</local-name>
+            <parent-name>[Hospital ER.csv]</parent-name>
+            <remote-alias>patient_age</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_sat_score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[patient_sat_score]</local-name>
+            <parent-name>[Hospital ER.csv]</parent-name>
+            <remote-alias>patient_sat_score</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_first_inital</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[patient_first_inital]</local-name>
+            <parent-name>[Hospital ER.csv]</parent-name>
+            <remote-alias>patient_first_inital</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_last_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[patient_last_name]</local-name>
+            <parent-name>[Hospital ER.csv]</parent-name>
+            <remote-alias>patient_last_name</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_race</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[patient_race]</local-name>
+            <parent-name>[Hospital ER.csv]</parent-name>
+            <remote-alias>patient_race</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_admin_flag</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[patient_admin_flag]</local-name>
+            <parent-name>[Hospital ER.csv]</parent-name>
+            <remote-alias>patient_admin_flag</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>patient_waittime</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[patient_waittime]</local-name>
+            <parent-name>[Hospital ER.csv]</parent-name>
+            <remote-alias>patient_waittime</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>department_referral</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[department_referral]</local-name>
+            <parent-name>[Hospital ER.csv]</parent-name>
+            <remote-alias>department_referral</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Met Target Wait Time' datatype='string' name='[Calculation_2296078425169921]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [patient_waittime] &lt; [Parameters].[Parameter 2296078424903680]&#13;&#10;THEN &quot;True&quot;&#13;&#10;ELSE &quot;False&quot;&#13;&#10;END' />
+      </column>
+      <column caption='Hospital ER.csv' datatype='table' name='[__tableau_internal_object_id__].[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Department Referral' datatype='string' name='[department_referral]' role='dimension' type='nominal' />
+      <column caption='Patient Admin Flag' datatype='boolean' name='[patient_admin_flag]' role='dimension' type='nominal' />
+      <column caption='Patient Age' datatype='integer' name='[patient_age]' role='measure' type='quantitative' />
+      <column caption='Patient First Inital' datatype='string' name='[patient_first_inital]' role='dimension' type='nominal' />
+      <column caption='Patient Gender' datatype='string' name='[patient_gender]' role='dimension' type='nominal' />
+      <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+      <column caption='Patient Last Name' datatype='string' name='[patient_last_name]' role='dimension' type='nominal' />
+      <column caption='Patient Race' datatype='string' name='[patient_race]' role='dimension' type='nominal' />
+      <column caption='Patient Sat Score' datatype='integer' name='[patient_sat_score]' role='measure' type='quantitative' />
+      <column caption='Patient Waittime' datatype='integer' name='[patient_waittime]' role='measure' type='quantitative' />
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/ebntl/AppData/Local/Temp/TableauTemp/#TableauTemp_1w4dnrm1g6jz1h119l36n05uf87i.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/14/2026 09:31:50 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Hospital ER.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>9216</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[patient_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Hospital ER.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9216</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[patient_gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_gender</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Hospital ER.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[patient_age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_age</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Hospital ER.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>79</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_sat_score</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[patient_sat_score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_sat_score</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Hospital ER.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_first_inital</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[patient_first_inital]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_first_inital</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Hospital ER.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_last_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[patient_last_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_last_name</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Hospital ER.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5436</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_race</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[patient_race]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_race</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Hospital ER.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_admin_flag</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[patient_admin_flag]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_admin_flag</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Hospital ER.csv</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>patient_waittime</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[patient_waittime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>patient_waittime</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Hospital ER.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>department_referral</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[department_referral]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>department_referral</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Hospital ER.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Target Wait Time' datatype='integer' name='[Parameter 2296078424903680]' param-domain-type='any' role='measure' type='quantitative' value='20'>
+          <calculation class='tableau' formula='20' />
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='Hospital ER.csv' id='Hospital ER.csv_A6150FFB985E4B3C8360EEB7227AB0E5'>
+            <properties context=''>
+              <relation connection='textscan.00pfbwp0b93nif1133vhh1l1uzuk' name='Hospital ER.csv' table='[Hospital ER#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='datetime' name='date' ordinal='0' />
+                  <column datatype='string' name='patient_id' ordinal='1' />
+                  <column datatype='string' name='patient_gender' ordinal='2' />
+                  <column datatype='integer' name='patient_age' ordinal='3' />
+                  <column datatype='integer' name='patient_sat_score' ordinal='4' />
+                  <column datatype='string' name='patient_first_inital' ordinal='5' />
+                  <column datatype='string' name='patient_last_name' ordinal='6' />
+                  <column datatype='string' name='patient_race' ordinal='7' />
+                  <column datatype='boolean' name='patient_admin_flag' ordinal='8' />
+                  <column datatype='integer' name='patient_waittime' ordinal='9' />
+                  <column datatype='string' name='department_referral' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='AdmissionsByMonth'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hospital ER' name='federated.071q73a1w3m9wx1b3tg2r07t78jj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.071q73a1w3m9wx1b3tg2r07t78jj'>
+            <column-instance column='[patient_id]' derivation='CountD' name='[ctd:patient_id:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+            <column-instance column='[date]' derivation='Month-Trunc' name='[tmn:date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.071q73a1w3m9wx1b3tg2r07t78jj].[tmn:date:qk]' field-type='quantitative' max='#2021-01-25 00:38:37.284#' min='#2019-01-08 18:53:20.290#' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.071q73a1w3m9wx1b3tg2r07t78jj].[ctd:patient_id:qk]' field-type='quantitative' max='615' min='-74' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='range' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.071q73a1w3m9wx1b3tg2r07t78jj].[ctd:patient_id:qk]</rows>
+        <cols>[federated.071q73a1w3m9wx1b3tg2r07t78jj].[tmn:date:qk]</cols>
+      </table>
+      <simple-id uuid='{2CCA2A71-ECDC-40E5-B313-86B23475E4EA}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hospital ER' name='federated.071q73a1w3m9wx1b3tg2r07t78jj' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Target Wait Time' datatype='integer' name='[Parameter 2296078424903680]' param-domain-type='any' role='measure' type='quantitative' value='20'>
+              <calculation class='tableau' formula='20' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.071q73a1w3m9wx1b3tg2r07t78jj'>
+            <column caption='Met Target Wait Time' datatype='string' name='[Calculation_2296078425169921]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [patient_waittime] &lt; [Parameters].[Parameter 2296078424903680]&#13;&#10;THEN &quot;True&quot;&#13;&#10;ELSE &quot;False&quot;&#13;&#10;END' />
+            </column>
+            <column-instance column='[patient_id]' derivation='CountD' name='[ctd:patient_id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_2296078425169921]' derivation='None' name='[none:Calculation_2296078425169921:nk]' pivot='key' type='nominal' />
+            <column caption='Patient Id' datatype='string' name='[patient_id]' role='dimension' type='nominal' />
+            <column caption='Patient Waittime' datatype='integer' name='[patient_waittime]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='20' />
+            <format attr='cell-h' value='20' />
+            <format attr='cell' value='20' />
+            <format attr='cell-q' value='100' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.7999999523162842' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.071q73a1w3m9wx1b3tg2r07t78jj].[ctd:patient_id:qk]</rows>
+        <cols>[federated.071q73a1w3m9wx1b3tg2r07t78jj].[none:Calculation_2296078425169921:nk]</cols>
+      </table>
+      <simple-id uuid='{2ACF4D3F-97FD-49FF-A30A-C44756C08485}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' name='AdmissionsByMonth'>
+      <cards>
+        <edge name='left'>
+          <strip size='106'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='20'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.071q73a1w3m9wx1b3tg2r07t78jj].[none:patient_id:nk]</field>
+            <field>[federated.071q73a1w3m9wx1b3tg2r07t78jj].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E5EE8D66-B5F9-4DF1-95B1-9E9EF6C5DDF8}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.071q73a1w3m9wx1b3tg2r07t78jj].[none:Calculation_2296078425169921:nk]</field>
+            <field>[federated.071q73a1w3m9wx1b3tg2r07t78jj].[none:patient_id:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{EEFC64D9-219E-4E7E-A170-FA652CD1B196}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='AdmissionsByMonth' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='122'>
+      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
+    </thumbnail>
+  </thumbnails>
+  <referenced-extensions>
+    <referenced-extension>
+      <manifest manifest-version='0.1'>
+        <worksheet-extension extension-version='1.0.0' id='com.tableau.extension.radial'>
+          <default-locale>en_US</default-locale>
+          <name resource-id='name' />
+          <description>A radial chart displays data in a circular format in which the total of all segment values add up to 100%, representing the whole. This visualization type creates donut charts, sunbursts, and fan charts, which are powerful means to summarize simple part-to-whole insights at a high level.</description>
+          <author email='github@tableau.com' name='Tableau' organization='Tableau' website='https://www.tableau.com/support' />
+          <min-api-version>1.12</min-api-version>
+          <source-location>
+            <url>https://tableau-extensions.tableauusercontent.com/radial/radial.html</url>
+          </source-location>
+          <icon />
+          <context-menu>
+            <configure-context-menu-item />
+          </context-menu>
+          <encoding id='level'>
+            <display-name resource-id='level-encoding'>Ring</display-name>
+            <role-spec>
+              <role-type>discrete-dimension</role-type>
+              <role-type>discrete-measure</role-type>
+            </role-spec>
+            <fields max-count='5' />
+            <encoding-icon token='level-radial' />
+            <tooltip resource-id='level-tooltip'>Radial Ring - Drag up to five dimensions here.</tooltip>
+          </encoding>
+          <encoding id='angle'>
+            <display-name resource-id='angle-encoding'>Angle</display-name>
+            <role-spec>
+              <role-type>continuous-measure</role-type>
+            </role-spec>
+            <fields max-count='1' />
+            <encoding-icon token='wedge' />
+            <tooltip resource-id='angle-tooltip'>Segment Angle - Drag a measure here.</tooltip>
+          </encoding>
+          <encoding id='center'>
+            <display-name resource-id='center-encoding'>Center</display-name>
+            <role-spec>
+              <role-type>continuous-measure</role-type>
+              <role-type>discrete-measure</role-type>
+            </role-spec>
+            <fields max-count='1' />
+            <encoding-icon token='exclamation' />
+            <tooltip resource-id='center-tooltip'>Center Label - Drag a measure here</tooltip>
+          </encoding>
+        </worksheet-extension>
+        <resources>
+          <resource id='angle-encoding'>
+            <text locale='de_DE'>Winkel</text>
+            <text locale='en_GB'>Angle</text>
+            <text locale='en_US'>Angle</text>
+            <text locale='es_ES'>Ángulo</text>
+            <text locale='fr_CA'>Angle</text>
+            <text locale='fr_FR'>Angle</text>
+            <text locale='it_IT'>Angolo</text>
+            <text locale='ja_JP'>角度</text>
+            <text locale='ko_KR'>각도</text>
+            <text locale='nl_NL'>Hoek</text>
+            <text locale='pt_BR'>Ângulo</text>
+            <text locale='sv_SE'>Vinkel</text>
+            <text locale='th_TH'>มุม</text>
+            <text locale='zh_CN'>角度</text>
+            <text locale='zh_TW'>角度</text>
+          </resource>
+          <resource id='angle-tooltip'>
+            <text locale='de_DE'>Segmentwinkel - Kennzahl hierher ziehen.</text>
+            <text locale='en_GB'>Segment Angle - Drag a measure here.</text>
+            <text locale='en_US'>Segment Angle - Drag a measure here.</text>
+            <text locale='es_ES'>Ángulo del segmento - Arrastre la medida aquí.</text>
+            <text locale='fr_CA'>Angle du segment - Faites glisser la mesure ici.</text>
+            <text locale='fr_FR'>Angle du segment - Faites glisser la mesure ici.</text>
+            <text locale='it_IT'>Angolo del segmento - Trascina la misura qui.</text>
+            <text locale='ja_JP'>セグメントの角度 - メジャーを使用.</text>
+            <text locale='ko_KR'>세그먼트 각도 - 측정값 사용.</text>
+            <text locale='nl_NL'>Segmenthoek - Sleep meetwaarde hierheen.</text>
+            <text locale='pt_BR'>Ângulo do segmento - Arraste a medida aqui.</text>
+            <text locale='sv_SE'>Segmentvinkel - Dra mått hit.</text>
+            <text locale='th_TH'>มุมของส่วน - ใช้ค่าการวัด.</text>
+            <text locale='zh_CN'>分段角度 - 使用度量.</text>
+            <text locale='zh_TW'>分段角度 - 使用測量值.</text>
+          </resource>
+          <resource id='center-encoding'>
+            <text locale='de_DE'>Zentrum</text>
+            <text locale='en_GB'>Centre</text>
+            <text locale='en_US'>Center</text>
+            <text locale='es_ES'>Centro</text>
+            <text locale='fr_CA'>Centre</text>
+            <text locale='fr_FR'>Centre</text>
+            <text locale='it_IT'>Centro</text>
+            <text locale='ja_JP'>中心</text>
+            <text locale='ko_KR'>중심</text>
+            <text locale='nl_NL'>Centrum</text>
+            <text locale='pt_BR'>Centro</text>
+            <text locale='sv_SE'>Centrum</text>
+            <text locale='th_TH'>ศูนย์กลาง</text>
+            <text locale='zh_CN'>中心</text>
+            <text locale='zh_TW'>中心</text>
+          </resource>
+          <resource id='center-tooltip'>
+            <text locale='de_DE'>Text zentrieren - Kennzahl hierher ziehen.</text>
+            <text locale='en_GB'>Centre Label - Drag a measure here.</text>
+            <text locale='en_US'>Center Label - Drag a measure here.</text>
+            <text locale='es_ES'>Texto central - Arrastre la medida aquí.</text>
+            <text locale='fr_CA'>Texte central - Faites glisser la mesure ici.</text>
+            <text locale='fr_FR'>Texte central - Faites glisser la mesure ici.</text>
+            <text locale='it_IT'>Testo centrale - Trascina la misura qui.</text>
+            <text locale='ja_JP'>中央のテキスト - メジャーを使用.</text>
+            <text locale='ko_KR'>중앙 텍스트 - 측정값 사용.</text>
+            <text locale='nl_NL'>Tekst in het midden - Sleep meetwaarde hierheen.</text>
+            <text locale='pt_BR'>Texto central - Arraste a medida aqui</text>
+            <text locale='sv_SE'>Tekst in het midden - Sleep meetwaarde hierheen.</text>
+            <text locale='th_TH'>ข้อความตรงกลาง - ใช้ค่าการวัด.</text>
+            <text locale='zh_CN'>中心文字 - 使用度量.</text>
+            <text locale='zh_TW'>中心文字 - 使用測量值.</text>
+          </resource>
+          <resource id='level-encoding'>
+            <text locale='de_DE'>Hierarchieebene</text>
+            <text locale='en_GB'>Ring</text>
+            <text locale='en_US'>Ring</text>
+            <text locale='es_ES'>Anillo</text>
+            <text locale='fr_CA'>Anneau</text>
+            <text locale='fr_FR'>Anneau</text>
+            <text locale='it_IT'>Anello</text>
+            <text locale='ja_JP'>階層レベル</text>
+            <text locale='ko_KR'>원</text>
+            <text locale='nl_NL'>Ring</text>
+            <text locale='pt_BR'>Anel</text>
+            <text locale='sv_SE'>nivå</text>
+            <text locale='th_TH'>วงแหวน</text>
+            <text locale='zh_CN'>环</text>
+            <text locale='zh_TW'>環</text>
+          </resource>
+          <resource id='level-tooltip'>
+            <text locale='de_DE'>Hierarchieebene - Ziehen Sie hier bis zu fünf Dimensionen.</text>
+            <text locale='en_GB'>Radial Ring - Drag up to five dimensions here.</text>
+            <text locale='en_US'>Radial Ring - Drag up to five dimensions here.</text>
+            <text locale='es_ES'>Anillo - Arrastre aquí hasta cinco dimensiones.</text>
+            <text locale='fr_CA'>Anneau - Faites glisser jusqu&apos;à cinq dimensions ici.</text>
+            <text locale='fr_FR'>Anneau - Faites glisser jusqu&apos;à cinq dimensions ici.</text>
+            <text locale='it_IT'>Anello - Trascina qui fino a cinque dimensioni.</text>
+            <text locale='ja_JP'>階層レベル - 最大5つのディメンション.</text>
+            <text locale='ko_KR'>원 - 최대 5개의 디멘션.</text>
+            <text locale='nl_NL'>Ring - Sleep hier maximaal vijf dimensies naartoe.</text>
+            <text locale='pt_BR'>Anel - Arraste até cinco dimensões aqui.</text>
+            <text locale='sv_SE'>nivå - Dra upp till fem dimensioner här.</text>
+            <text locale='th_TH'>วงแหวน - &#9;มิติสูงสุดห้ามิติ.</text>
+            <text locale='zh_CN'>环 - 最多五个维度.</text>
+            <text locale='zh_TW'>環 - 最多五個維度.</text>
+          </resource>
+          <resource id='name'>
+            <text locale='en_US'>Radial</text>
+            <text locale='ja_JP'>サンバーストチャート</text>
+            <text locale='zh_CN'>旭日圖</text>
+          </resource>
+        </resources>
+      </manifest>
+      <referenced-views>
+        <referenced-view instances='1' viewId='fake sheet name' />
+      </referenced-views>
+    </referenced-extension>
+  </referenced-extensions>
+</workbook>
